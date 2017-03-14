@@ -1,5 +1,9 @@
 'use strict'
-
+debugger;
 module.exports = function(message) {
-	alert(`Welcome $(message)`);
+	if (process.env.NODE_ENV == 'development'){
+		console.log('message');
+	}
+	alert(process.env.USER);
+	alert(`Welcome + $(message)`);
 };
